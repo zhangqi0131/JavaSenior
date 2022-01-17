@@ -30,7 +30,7 @@
       <option name="IGNORE_JAVADOC_PERIOD" value="true" />
       <option name="IGNORE_DUPLICATED_THROWS" value="false" />
       <option name="IGNORE_POINT_TO_ITSELF" value="false" />
-      <option name="myAdditionalJavadocTags" value="author:,description:,program:,create:,description:实现Runnbale接口的方式，同步代码块解决线程安全问题" />
+      <option name="myAdditionalJavadocTags" value="author:,description:,program:,create:,description:实现Runnbale接口的方式，同步代码块解决线程安全问题,date" />
     </inspection_tool>
   </profile>
 </component>
