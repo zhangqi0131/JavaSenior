@@ -15,5 +15,6 @@ public class Split {
         String[] b = a.split("-");
         System.out.println(b[0]);
 
+        System.out.println("-----------");
     }
 }
