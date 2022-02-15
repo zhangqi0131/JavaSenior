@@ -39,6 +39,7 @@ public class CustomerForQuery {
                 ps.setObject(i + 1, args[i]);
             }
             rs = ps.executeQuery();
+
             ResultSetMetaData rsmd = ps.getMetaData();
             int columnCount = rsmd.getColumnCount();
             if (rs.next()) {

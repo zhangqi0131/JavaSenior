@@ -3,9 +3,9 @@ package com.zq.bean;
 import java.sql.Date;
 
 public class Order {
-    private int orderId=0;
-    private String orderName =null;
-    private Date orderDate=null;
+    private int orderId = 0;
+    private String orderName = null;
+    private Date orderDate = null;
 
     public Order() {
     }
