@@ -4,14 +4,57 @@ import com.zq.util.JDBCUtils;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 import java.util.Scanner;
 
 public class Exer2Test {
-    // 1.向examstudent中添加一条记录
+
+    /**
+     * 通过准考证号删除指定的学生
+     */
+    @Test
+    public void testDeleteByExamCard() {
+        System.out.println("输入准考证号：");
+        Scanner scanner = new Scanner(System.in);
+        String examCard = scanner.next();
+        String sql = "select FlowID flowID, Type type, IDCard, ExamCard examCard, StudentName name, Location location, Grade grade from examstudent where examCard=?";
+
+        Student student = getInstance(Student.class, sql, examCard);
+        if (student != null) {
+            sql = "delete from examstudent where examCard=?";
+            int count = update(sql, examCard);
+            if (count > 0) {
+                System.out.println("删除成功");
+            }
+        } else {
+            System.out.println("该学生不存在");
+        }
+    }
+
+    @Test
+    public void testDeleteByExamCard1() {
+        System.out.println("输入准考证号：");
+        Scanner scanner = new Scanner(System.in);
+        String examCard = scanner.next();
+
+        String sql = "delete from examstudent where examCard=?";
+        int count = update(sql, examCard);
+        if (count > 0) {
+            System.out.println("删除成功");
+        } else {
+            System.out.println("该学生不存在");
+        }
+    }
+
+
+
+    /**
+     * @title 1.向examstudent中添加一条记录
+     * @description
+     * @author ZhangQi
+     * @updateTime 2022/2/16 13:19
+     * @throws
+     */
     @Test
     public void testUpdate() {
         Scanner scanner = new Scanner(System.in);
@@ -67,7 +110,7 @@ public class Exer2Test {
         Scanner scanner = new Scanner(System.in);
         String selection = scanner.next();
         if ("a".equalsIgnoreCase(selection)) {
-            System.out.println("输入准考证号");
+            System.out.print("输入准考证号：");
             String examCard = scanner.next();
             String sql = "select FlowID flowID, Type type, IDCard, ExamCard examCard, StudentName name, Location location, Grade grade from examstudent where examCard=?";
             Student student = getInstance(Student.class, sql, examCard);
@@ -77,10 +120,17 @@ public class Exer2Test {
                 System.out.println("学生不存在，重新输入");
             }
         } else if ("b".equalsIgnoreCase(selection)) {
-            System.out.println("输入身份证号");
+            System.out.print("输入身份证号：");
+            String IDCard = scanner.next();
+            String sql = "select FlowID flowID, Type type, IDCard, ExamCard examCard, StudentName name, Location location, Grade grade from examstudent where IDCard=?";
+            Student student = getInstance(Student.class, sql, IDCard);
+            if (student != null) {
+                System.out.println(student);
+            } else {
+                System.out.println("学生不存在，重新输入");
+            }
         } else {
             System.out.println("输入有误，重新进入程序");
-            QueryWithIDCardOrExamCard();
         }
 
 
