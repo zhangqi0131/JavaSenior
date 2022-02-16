@@ -4,13 +4,11 @@ import com.zq.connection.ConnectionTest;
 import com.zq.util.JDBCUtils;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -84,11 +82,12 @@ public class PreparedStatementUpdateTest {
     public void insertTest() {
         Connection connection = null;
         PreparedStatement ps = null;
+        Properties properties;
         try {
             // 1.读取配置文件中的4个基本信息
             InputStream is = ConnectionTest.class.getClassLoader().getResourceAsStream("jdbc.properties");
             ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
-            Properties properties = new Properties();
+            properties = new Properties();
             properties.load(is);
 
             String user = properties.getProperty("user");
@@ -107,7 +106,7 @@ public class PreparedStatementUpdateTest {
             ps = connection.prepareStatement(sql);
 
             // 5.填充占位符
-            SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date date = sdf.parse("2022-11-13");
             ps.setString(1, "Tom");
             ps.setString(2, "Tom@163.com");
