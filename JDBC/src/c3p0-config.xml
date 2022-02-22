@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c3p0-config>
+
+    <named-config name="c3p0test">
+        <!-- 获取提供连接的4个基本信息 -->
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcURL">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;charsetEncoding=utf-8&amp;rewriteBatchedStatements=true</property>
+        <property name="user">root</property>
+        <property name="password">zq123</property>
+
+        <!-- 进行数据库连接池管理的基本信息 -->
+        <!-- 当连接池中连接数不够时，c3p0一次性向数据库服务器申请的连接数 -->
+        <property name="acquireIncrement">50</property>
+        <!-- 初始化的连接数 -->
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxPoolSize">1000</property>
+        <!-- c3p0数据库连接池维护的最多的Statement的个数 -->
+        <property name="maxStatements">50</property>
+        <!-- 每个连接中可以使用的最多的Statement个数 -->
+        <property name="maxStatementsPerConnection">2</property>
+
+    </named-config>
+</c3p0-config>
