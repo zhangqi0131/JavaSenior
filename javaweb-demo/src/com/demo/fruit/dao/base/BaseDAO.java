@@ -7,12 +7,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author zhangqi
- */
 public abstract class BaseDAO<T> {
     public final String DRIVER = "com.mysql.cj.jdbc.Driver" ;
-    public final String URL = "jdbc:mysql://localhost:3306/fruitdb?useUnicode=true&charsetEncoding=utf-8&rewriteBatchedStatements=true";
+    public final String URL = "jdbc:mysql://localhost:3306/fruitdb?useUnicode=true&characterEncoding=utf-8&useSSL=false";
     public final String USER = "root";
     public final String PWD = "zq123" ;
 
@@ -43,7 +40,7 @@ public abstract class BaseDAO<T> {
     protected Connection getConn(){
         try {
             //1.加载驱动
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName(DRIVER);
             //2.通过驱动管理器获取连接对象
             return DriverManager.getConnection(URL, USER, PWD);
         } catch (ClassNotFoundException | SQLException e) {

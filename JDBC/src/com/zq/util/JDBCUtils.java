@@ -1,6 +1,5 @@
 package com.zq.util;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
@@ -26,7 +25,7 @@ public class JDBCUtils {
 
         Class.forName(driverClass);
 
-        Connection conn = DriverManager.getConnection(url,user, password);
+        Connection conn = DriverManager.getConnection(url, user, password);
         return conn;
     }
 

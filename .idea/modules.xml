@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaSenior.iml" filepath="$PROJECT_DIR$/javaSenior.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb-demo/javaweb-demo.iml" filepath="$PROJECT_DIR$/javaweb-demo/javaweb-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb-servlet/javaweb-servlet.iml" filepath="$PROJECT_DIR$/javaweb-servlet/javaweb-servlet.iml" />
     </modules>
   </component>
 </project>
