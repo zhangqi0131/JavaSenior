@@ -61,7 +61,7 @@ public class ConnectionTest {
         Driver driver = (Driver) clazz.newInstance();
 
         // 2.获取连接的3个基本信息
-        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8";
+        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false";
         String user = "root";
         String password = "zq123";
         // 3.注册驱动

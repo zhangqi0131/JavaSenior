@@ -1,7 +1,7 @@
 package com.demo.fruit.dao.impl;
 
-import com.demo.fruit.dao.FruitDAO;
 import com.demo.fruit.dao.base.BaseDAO;
+import com.demo.fruit.dao.FruitDAO;
 import com.demo.fruit.pojo.Fruit;
 
 import java.util.List;
