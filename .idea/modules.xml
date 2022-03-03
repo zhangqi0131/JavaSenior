@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaSenior.iml" filepath="$PROJECT_DIR$/javaSenior.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb-demo/javaweb-demo.iml" filepath="$PROJECT_DIR$/javaweb-demo/javaweb-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb-servlet/javaweb-servlet.iml" filepath="$PROJECT_DIR$/javaweb-servlet/javaweb-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb-thymeleaf/javaweb-thymeleaf.iml" filepath="$PROJECT_DIR$/javaweb-thymeleaf/javaweb-thymeleaf.iml" />
     </modules>
   </component>
 </project>

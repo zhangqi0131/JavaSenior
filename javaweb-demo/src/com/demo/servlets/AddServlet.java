@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -32,6 +33,12 @@ public class AddServlet extends HttpServlet {
         boolean flag = fruitDAO.addFruit(new Fruit(0 , fname , price , fcount , remark));
 
         System.out.println(flag ? "添加成功！" : "添加失败！");
+
+        HttpSession session = request.getSession();
+        System.out.println(session.getId());
+        session.isNew();
+        session.getMaxInactiveInterval(); //非激活间隔时长，默认1800秒
+        session.invalidate(); // 让会话失效
 
 
 
