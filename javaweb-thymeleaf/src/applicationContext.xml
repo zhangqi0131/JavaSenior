@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    作用是，将来servletPath中涉及的名字是fruit，那么就要FruitController这个类来处理
+    <bean id="fruit" class="com.atguigu.fruit.controller.FruitController"/>
+</beans>
+
+
+
+<!--XML:可拓展的标记语言
+    XML包含三个部分：
+    1.XML声明 （声明必须在第一行）
+    2.DTD文档声明类型
+    3.XML正文
+    -->
