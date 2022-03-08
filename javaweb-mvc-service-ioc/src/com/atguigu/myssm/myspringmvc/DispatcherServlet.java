@@ -1,4 +1,4 @@
-package com.atguigu.fruit.pojo.myspringmvc;
+package com.atguigu.myssm.myspringmvc;
 
 import com.atguigu.myssm.io.BeanFactory;
 import com.atguigu.myssm.io.ClassPathXmlApplocationContext;
@@ -35,7 +35,7 @@ public class DispatcherServlet extends ViewBaseServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
+        //request.setCharacterEncoding("utf-8");
 
         // http://localhost:8989/pro09/html.do?pageNo=1
         // servletPath 为 /hello.do

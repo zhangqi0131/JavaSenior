@@ -13,4 +13,13 @@
         <param-name>view-suffix</param-name>
         <param-value>.html</param-value>
     </context-param>
+
+    <listener>
+        <listener-class>com.atguigu.myssm.listener.MyServletContextListener</listener-class>
+    </listener>
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>applicationContext.xml</param-value>
+    </context-param>
 </web-app>
