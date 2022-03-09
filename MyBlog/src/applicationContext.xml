@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <bean id="userBasicDAO" class="com.zq.myblog.dao.impl.UserBasicDAOImpl"/>
+    <bean id="topicDAO" class="com.zq.myblog.dao.impl.TopicDAOImpl"/>
+
+    <bean id="userService" class="com.zq.myblog.service.impl.UserBasicServiceImpl">
+        <property name="userBasicDAO" ref="userBasicDAO"/>
+    </bean>
+
+    <bean id="topicService" class="com.zq.myblog.service.impl.TopicServiceImpl">
+        <property name="topicDAO" ref="topicDAO"/>
+    </bean>
+</beans>
