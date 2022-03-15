@@ -1,4 +1,4 @@
-package com.zq.myssm.myspringmvc;
+package com.zq.myblog.dao.myssm.myspringmvc;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;

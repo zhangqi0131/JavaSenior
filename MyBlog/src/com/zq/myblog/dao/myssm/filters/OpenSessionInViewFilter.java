@@ -1,6 +1,6 @@
-package com.zq.myssm.filters;
+package com.zq.myblog.dao.myssm.filters;
 
-import com.zq.myssm.trans.TransactionManager;
+import com.zq.myblog.dao.myssm.trans.TransactionManager;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

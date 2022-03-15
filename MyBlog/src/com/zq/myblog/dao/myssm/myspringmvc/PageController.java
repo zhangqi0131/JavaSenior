@@ -1,4 +1,4 @@
-package com.zq.myssm.myspringmvc;
+package com.zq.myblog.dao.myssm.myspringmvc;
 
 public class PageController {
     public String page(String page){

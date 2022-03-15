@@ -1,4 +1,4 @@
-package com.zq.myssm.basedao;
+package com.zq.myblog.dao.myssm.basedao;
 
 import java.lang.reflect.*;
 import java.sql.*;

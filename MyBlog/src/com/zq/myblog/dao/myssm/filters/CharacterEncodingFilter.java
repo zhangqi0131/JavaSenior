@@ -1,6 +1,6 @@
-package com.zq.myssm.filters;
+package com.zq.myblog.dao.myssm.filters;
 
-import com.zq.myssm.util.StringUtil;
+import com.zq.myblog.dao.myssm.util.StringUtil;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

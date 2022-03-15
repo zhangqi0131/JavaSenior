@@ -1,4 +1,4 @@
-package com.zq.myssm.util;
+package com.zq.myblog.dao.myssm.util;
 
 public class StringUtil {
     //判断字符串是否为null或者""

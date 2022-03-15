@@ -1,6 +1,6 @@
 package com.zq.myblog.pojo;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @author ZhangQi
@@ -11,14 +11,27 @@ import java.time.LocalDateTime;
 public class Reply {
     private Integer id;
     private String content;
-    private LocalDateTime replyDate;
+    private Date replyDate;
     private UserBasic author; //N:1
     private Topic topic; //N:1
 
     private HostReply hostReply; //1:1
 
-    public Reply() {
+    public Reply(Integer id) {
+        this.id = id;
     }
+
+    public Reply() {
+
+    }
+
+    public Reply(String content, Date replyDate, UserBasic author, Topic topic) {
+        this.content = content;
+        this.replyDate = replyDate;
+        this.author = author;
+        this.topic = topic;
+    }
+
 
     public Integer getId() {
         return id;
@@ -36,11 +49,11 @@ public class Reply {
         this.content = content;
     }
 
-    public LocalDateTime getReplyDate() {
+    public Date getReplyDate() {
         return replyDate;
     }
 
-    public void setReplyDate(LocalDateTime replyDate) {
+    public void setReplyDate(Date replyDate) {
         this.replyDate = replyDate;
     }
 

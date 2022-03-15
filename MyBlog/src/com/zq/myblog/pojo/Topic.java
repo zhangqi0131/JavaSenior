@@ -1,6 +1,6 @@
 package com.zq.myblog.pojo;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -13,12 +13,15 @@ public class Topic {
     private Integer id;
     private String title;
     private String content;
-    private Date topicDate;
+    private LocalDateTime topicDate;
     private UserBasic author; //N:1
 
     private List<Reply> repliyList; //1:M
 
     public Topic() {
+    }
+
+    public Topic(Integer topicId) {
     }
 
     public Integer getId() {
@@ -45,11 +48,11 @@ public class Topic {
         this.content = content;
     }
 
-    public Date getTopicDate() {
+    public LocalDateTime getTopicDate() {
         return topicDate;
     }
 
-    public void setTopicDate(Date topicDate) {
+    public void setTopicDate(LocalDateTime topicDate) {
         this.topicDate = topicDate;
     }
 

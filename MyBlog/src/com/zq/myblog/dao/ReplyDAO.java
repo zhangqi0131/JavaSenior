@@ -12,13 +12,31 @@ import java.util.List;
  * @createTime 2022年03月09日 18:18  周三
  */
 public interface ReplyDAO {
-    //获取指定日志的回复列表
+
+    /**
+     * 获取指定日志的回复列表
+     * @param topic
+     * @return
+     */
     List<Reply> getReplyList(Topic topic);
 
-    //添加回复
+    /**
+     * 添加回复
+     * @param reply
+     */
     void addReply(Reply reply);
 
-    //删除回复
+    /**
+     * 删除回复
+     * @param id
+     */
     void delReply(Integer id);
+
+    /**
+     * 根据id获取指定的reply
+     * @param id
+     * @return
+     */
+    Reply getReply(Integer id);
 
 }

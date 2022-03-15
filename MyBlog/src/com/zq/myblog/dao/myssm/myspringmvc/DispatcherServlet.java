@@ -1,7 +1,7 @@
-package com.zq.myssm.myspringmvc;
+package com.zq.myblog.dao.myssm.myspringmvc;
 
-import com.zq.myssm.util.StringUtil;
-import com.zq.myssm.ioc.BeanFactory;
+import com.zq.myblog.dao.myssm.ioc.BeanFactory;
+import com.zq.myblog.dao.myssm.util.StringUtil;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

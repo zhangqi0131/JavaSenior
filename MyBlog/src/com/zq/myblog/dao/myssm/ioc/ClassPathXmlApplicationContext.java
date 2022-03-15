@@ -1,6 +1,6 @@
-package com.zq.myssm.ioc;
+package com.zq.myblog.dao.myssm.ioc;
 
-import com.zq.myssm.util.StringUtil;
+import com.zq.myblog.dao.myssm.util.StringUtil;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

@@ -3,7 +3,7 @@ package com.zq.myblog.dao.impl;
 import com.zq.myblog.dao.TopicDAO;
 import com.zq.myblog.pojo.Topic;
 import com.zq.myblog.pojo.UserBasic;
-import com.zq.myssm.basedao.BaseDAO;
+import com.zq.myblog.dao.myssm.basedao.BaseDAO;
 
 import java.util.List;
 
@@ -27,11 +27,12 @@ public class TopicDAOImpl extends BaseDAO<Topic> implements TopicDAO {
 
     @Override
     public void delTopic(Topic topic) {
+        executeUpdate("delete from t_topic where id=?", topic.getId());
 
     }
 
     @Override
     public Topic getTopic(Integer id) {
-        return null;
+        return load("select * from t_topic where id=?", id);
     }
 }

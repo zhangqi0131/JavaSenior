@@ -1,6 +1,6 @@
-package com.zq.myssm.trans;
+package com.zq.myblog.dao.myssm.trans;
 
-import com.zq.myssm.basedao.ConnUtil;
+import com.zq.myblog.dao.myssm.basedao.ConnUtil;
 
 import java.sql.Connection;
 import java.sql.SQLException;

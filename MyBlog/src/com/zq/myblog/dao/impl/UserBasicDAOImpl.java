@@ -2,7 +2,7 @@ package com.zq.myblog.dao.impl;
 
 import com.zq.myblog.dao.UserBasicDAO;
 import com.zq.myblog.pojo.UserBasic;
-import com.zq.myssm.basedao.BaseDAO;
+import com.zq.myblog.dao.myssm.basedao.BaseDAO;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class UserBasicDAOImpl extends BaseDAO<UserBasic> implements UserBasicDAO
 
     @Override
     public List<UserBasic> getUserBasicList(UserBasic userBasic) {
-        String sql="select fid from t_friend where uid =?";
+        String sql="select fid AS id from t_friend where uid =?";
         return executeQuery(sql, userBasic.getId());
     }
 
